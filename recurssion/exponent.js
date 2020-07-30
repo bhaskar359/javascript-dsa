@@ -1,6 +1,5 @@
-function exponent(power, base) {
-  if (power === 1) return base;
-  return base * exponent(power - 1, base);
+function exponent(base, power) {
+  if (power === 0) return 1;
+  return base * exponent(base, power - 1);
 }
-
 console.log(exponent(2, 3));
